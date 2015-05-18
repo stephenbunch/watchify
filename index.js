@@ -157,6 +157,8 @@ function watchify (b, opts) {
     b._watcher = function (file, opts) {
         return chokidar.watch(file, opts);
     };
+    
+    b.invalidate = invalidate;
 
     return b;
 }
